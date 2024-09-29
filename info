@@ -1,0 +1,25 @@
+Importing Libraries:
+
+The script begins by importing the necessary libraries: os for operating system functions, pandas for data manipulation, and matplotlib.pyplot and seaborn for data visualization.
+Setting the Working Directory:
+
+A try-except block is used to read the CSV file named "titanic.csv" into a Pandas DataFrame called data.
+If the file is not found, an error message is printed, and the script exits. Any other exceptions are also caught and reported.
+Initial Data Exploration:
+
+The first few rows of the DataFrame are displayed using data.head().
+Basic statistics of the dataset are generated with data.describe(), and information about the DataFrame (including data types and non-null counts) is retrieved using data.info().
+The number of missing values in each column is calculated using data.isnull().sum().
+Data Cleaning:
+
+Rows with missing values in the "Embarked" column are dropped from the DataFrame.
+Missing values in the "Cabin" column are filled with the string "Unknown".
+Missing values in the "Age" column are filled with the mean age of the dataset.
+Further Data Validation:
+
+The script checks for any remaining missing values with data.isnull().sum() and identifies any duplicate rows with data.duplicated().sum().
+Data Visualization:
+
+A histogram of the "Age" distribution is created using Seaborn's histplot, with a Kernel Density Estimate (KDE) overlay.
+A count plot is generated to visualize survival counts by gender using countplot, with the "Survived" column as the hue.
+A scatter plot is created to show the relationship between "Age" and "Fare", colored by the "Survived" status using scatterplot.
