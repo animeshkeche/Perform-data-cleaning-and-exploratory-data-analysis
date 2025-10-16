@@ -1,1 +1,1 @@
-# SCT_DS_2
+#Perform data cleaning and exploratory data analysis
